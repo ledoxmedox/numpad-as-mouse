@@ -1,2 +1,2 @@
 # numpad-as-mouse
-numpad as mouse autohotkey script (WIP)
+numpad as mouse autohotkey script (beta)
