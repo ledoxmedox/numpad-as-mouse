@@ -3,9 +3,11 @@
 mouseSpeed := 10
 
 #if GetKeyState("ScrollLock", "T")
-    LShift::
+    Numpad0::
+    NumpadIns::
         mouseSpeed += 15
-        KeyWait, LShift
+        KeyWait, Numpad0
+	KeyWait, NumpadIns
         mouseSpeed -= 15
     return
 
@@ -86,10 +88,6 @@ mouseSpeed := 10
 	
 	Numpad3::
 	NumpadPgdn::
-	return
-	
-	Numpad0::
-	NumpadIns::
 	return
 	
 	NumpadDot::
