@@ -9,72 +9,74 @@ mouseSpeed := 10
         mouseSpeed -= 15
     return
 
-; Up
+; Move Up
 	NumpadUp::
-    Numpad8::
-	{
-	MouseMove 0, % -mouseSpeed, 0, R
-    }
-	return
-	
-; Right
+    	Numpad8::
+		{
+			MouseMove 0, % -mouseSpeed, 0, R
+    		}
+	return	
+
+; Move Right
 	NumpadRight::
 	Numpad6::
-	{
-	MouseMove % +mouseSpeed, 0, 0, R
-    }
+		{
+			MouseMove % +mouseSpeed, 0, 0, R
+    		}
 	return
 	
-; Down
+; Move Down
 	NumpadDown::
 	Numpad2::
-	{
-	MouseMove 0, % +mouseSpeed, 0, R
-    }
+		{
+			MouseMove 0, % +mouseSpeed, 0, R
+    		}
 	return
 
-; Left	
+; Move Left	
 	NumpadLeft::
 	Numpad4::
-	{
-	MouseMove % -mouseSpeed, 0, 0, R
-	}
+		{
+			MouseMove % -mouseSpeed, 0, 0, R
+		}
 	return
 
-; LMB
+; Left Mouse Button
 	NumpadHome::
 	Numpad7::
-    MouseClick, Left, , , 1, 0, D
-    KeyWait, NumpadHome
-    KeyWait, Numpad7
-    MouseClick, Left, , , 1, 0, U
+    		MouseClick, Left, , , 1, 0, D
+    		KeyWait, NumpadHome
+    		KeyWait, Numpad7
+    		MouseClick, Left, , , 1, 0, U
 	return
 	
-; RMB
+; Right Mouse Button
 	NumpadPgUp::
 	Numpad9::
-    MouseClick, Right, , , 1, 0, D
-    KeyWait, NumpadPgUp
-    KeyWait, Numpad9
-    MouseClick, Right, , , 1, 0, U
+		MouseClick, Right, , , 1, 0, D
+	    	KeyWait, NumpadPgUp
+	    	KeyWait, Numpad9
+	    	MouseClick, Right, , , 1, 0, U
 	return
 	
-; MMB
+; Middle Mouse Button
 	NumpadClear::
 	Numpad5::
 		{
 			SendInput {MButton}
-			}
+		}
 	return
 	
-; Scroll Up Down
+; Scroll Up
 	NumpadSub::SendInput {WheelUp}
+
+; Scroll Down
 	NumpadAdd::SendInput {WheelDown}
 
-; Back 
-	NumpadDiv::SendInput {XButton1}	
-
-; Foward
+; Side Mouse Button Foward
 	NumpadMult::SendInput {XButton2}
+
+; Side Mouse Button Back 
+	NumpadDiv::SendInput {XButton1}	
 
 #if
