@@ -5,7 +5,7 @@ mouseSpeed := 10
 #if GetKeyState("ScrollLock", "T")
     LShift::
         mouseSpeed += 15
-        KeyWait LShift
+        KeyWait, LShift
         mouseSpeed -= 15
     return
 
@@ -79,4 +79,21 @@ mouseSpeed := 10
 ; Side Mouse Button Back 
 	NumpadDiv::SendInput {XButton1}	
 
+; Disable hotkeys
+	Numpad1::
+	NumpadEnd::
+	return
+	
+	Numpad3::
+	NumpadPgdn::
+	return
+	
+	Numpad0::
+	NumpadIns::
+	return
+	
+	NumpadDot::
+	NumpadDel::
+	return
+	
 #if
